@@ -9,4 +9,4 @@ Install it like any other FlightGear addon - download this repository, either as
 to the command line, where `/path/to/addon/folder` is the path to the addon folder which contains this `README.md` file.
 
 ## Usage
-To use the addon in the simulator, hold the Alt key and click anywhere in the scenery - though all it does so far is to print out the longitude, latitude and altitude of the clicked point - more functions are coming soon.
+To use the addon in the simulator, hold the Alt key and click anywhere in the scenery. At each click, a tooltip in the main simulator window will display the coordinates of the clicked position, and the total distance of a line formed by the points you clicked, in the order you clicked. To clear the points and start measuring anew, press Alt+d.
