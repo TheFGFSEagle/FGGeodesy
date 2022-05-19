@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <PropertyList>
 	<keyboard>
-		<!--<key n="100">
+		<key n="100">
 			<name>Alt-d</name>
-			<desc>Drop one item</desc>
+			<desc>Clear points</desc>
 			<mod-alt>
 				<binding>
 					<command>nasal</command>
-					<script>targetDropping.pod.dropItem();</script>
+					<script>fgGeodesy.points = [];</script>
 				</binding>
 			</mod-alt>
-		</key>-->
+		</key>
 	</keyboard>
 </PropertyList>

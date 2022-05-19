@@ -6,17 +6,17 @@
 	</meta>
 
 	<menubar-items>
-		<!--<menu>
+		<menu>
 			<label>FGGeodesy</label>
 			<enabled type="bool">true</enabled>
 			
 			<item>
-				<label>Place pod in front of aircraft</label>
+				<label>Reload FGGeodesy</label>
 				<binding>
-					<command>nasal</command>
-					<script>targetDropping.pod.place();</script>
+					<command>addon-reload</command>
+					<id>org.flightgear.addons.FGGeodesy</id>
 				</binding>
-			</item>
-		</menu>-->
+			</item> 
+		</menu>
 	</menubar-items>
 </PropertyList>
