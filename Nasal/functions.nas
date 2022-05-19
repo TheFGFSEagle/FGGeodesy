@@ -20,7 +20,9 @@ var updateDistance = func {
 	distance = 0;
 	i = 1;
 	while (i < pointCount) {
-		distance = distance + fgGeodesy.points[i - 1].distance_to(fgGeodesy.points[i]);
+		var last = fgGeodesy.points[i - 1];
+		var cur = fgGeodesy.points[i];
+		distance = distance + math.sqrt(math.pow(cur.x() - last.x(), 2) + math.pow(cur.y() - last.y(), 2) + math.pow(cur.z() - last.z(), 2));
 		i += 1;
 	}
 	
