@@ -10,6 +10,11 @@ var clickCallback = func {
 	}
 }
 
+var toggleTopologyDistance = func {
+	fgGeodesy.topologyDistance = 1 - fgGeodesy.topologyDistance;
+	gui.popupTip(sprintf("Distance measuring: %s", ["2D", "3D"]))
+}
+
 var updateDistance = func {
 	var pointCount = size(fgGeodesy.points);
 	print(pointCount);
@@ -22,7 +27,11 @@ var updateDistance = func {
 	while (i < pointCount) {
 		var last = fgGeodesy.points[i - 1];
 		var cur = fgGeodesy.points[i];
-		distance = distance + math.sqrt(math.pow(cur.x() - last.x(), 2) + math.pow(cur.y() - last.y(), 2) + math.pow(cur.z() - last.z(), 2));
+		if (fgGeodesy.topologyDistance) {
+			distance = distance + math.sqrt(math.pow(cur.x() - last.x(), 2) + math.pow(cur.y() - last.y(), 2) + math.pow(cur.z() - last.z(), 2));
+		} else {
+			distance = distance + last.distance_to(cur);
+		}
 		i += 1;
 	}
 	

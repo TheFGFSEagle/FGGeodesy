@@ -11,6 +11,13 @@
 			<enabled type="bool">true</enabled>
 			
 			<item>
+				<label>Toggle 2D / 3D distance</label>
+				<binding>
+					<command>nasal</command>
+					<script>fgGeodesy.toggleTopologyDistance();</script>
+				</binding>
+			</item>
+			<item>
 				<label>Reload FGGeodesy</label>
 				<binding>
 					<command>addon-reload</command>
